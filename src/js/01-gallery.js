@@ -29,10 +29,8 @@ galleryItems.forEach((image) => {
       
 const { source, description } = event.currentTarget.querySelector("img").dataset;
 
-   const instance = basicLightbox.create(
-    `<img src="${source}" alt="${description}">`,
-    {
-      onShow: (instance) => {
+   const instance = basicLightbox.create(`<img src="${source}" alt="${description}">`,
+    {onShow: (instance) => {
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") {
             instance.close();
