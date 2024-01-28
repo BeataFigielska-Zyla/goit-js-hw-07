@@ -17,13 +17,13 @@ const li = document.createElement("li");
   link.classList.add("gallery__link");
   link.href = original;
 
-  const img = document.createElement("img");
-  img.classList.add("gallery__image");
-  img.src = preview;
-  img.dataset.source = original;
-  img.alt = description;
+  const image = document.createElement("img");
+  image.classList.add("gallery__image");
+  image.src = preview;
+  image.dataset.source = original;
+  image.alt = description;
 
-  link.appendChild(img);
+  link.appendChild(image);
   li.appendChild(link);
   gallery.appendChild(li);
 });
