@@ -29,13 +29,10 @@ const li = document.createElement("li");
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-    
-    
-  });
-});
 
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250, 
+  
+  });
 
