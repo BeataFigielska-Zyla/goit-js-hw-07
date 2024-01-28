@@ -14,13 +14,13 @@ galleryItems.forEach((image) => {
   link.classList.add("gallery__link");
   link.href = original;
 
-  const img = document.createElement("img");
-  img.classList.add("gallery__image");
-  img.src = preview;
-  img.dataset.source = original;
-  img.alt = description;
+  const picture = document.createElement("img");
+  picture.classList.add("gallery__image");
+  picture.src = preview;
+  picture.dataset.source = original;
+  picture.alt = description;
 
-  link.appendChild(img);
+  link.appendChild(picture);
   li.appendChild(link);
   gallery.appendChild(li);
 
