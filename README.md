@@ -1,4 +1,4 @@
-#Homework 7
+# Homework 7
 
 https://beatafigielska-zyla.github.io/goit-js-hw-07/
 
