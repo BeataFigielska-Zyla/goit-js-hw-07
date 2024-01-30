@@ -5,11 +5,11 @@ import { galleryItems } from './gallery-items.js';
 const gallery = document.querySelector(".gallery");
 
 const galleryPictures = galleryItems.map((item) => {
-  const li = document.createElement("li");
+  const listPictures = document.createElement("li");
   const link = document.createElement("a");
   const picture = document.createElement("img");
 
-  li.classList.add("gallery__item");
+  listPictures.classList.add("gallery__item");
   link.classList.add("gallery__link");
   picture.classList.add("gallery__image");
 
@@ -19,34 +19,11 @@ const galleryPictures = galleryItems.map((item) => {
   picture.alt = item.description;
 
   link.appendChild(picture);
-  li.appendChild(link);
-  return li;
+  listPictures.appendChild(link);
+  return listPictures;
 });
 
 gallery.append(...galleryPictures);
-
-
-// galleryItems.forEach((item) => {
-//   const { original, preview, description } = item;
-
-// const li = document.createElement("li");
-//   li.classList.add("gallery__item");
-
-//   const link = document.createElement("a");
-//   link.classList.add("gallery__link");
-//   link.href = original;
-
-//   const picture = document.createElement("img");
-//   picture.classList.add("gallery__image");
-//   picture.src = preview;
-//   picture.dataset.source = original;
-//   picture.alt = description;
-
-//   link.appendChild(picture);
-//   li.appendChild(link);
-//   gallery.appendChild(li);
-// });
-
 
 
 const lightbox = new SimpleLightbox(".gallery a", {

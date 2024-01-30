@@ -5,11 +5,11 @@ import { galleryItems } from "./gallery-items.js";
 const gallery = document.querySelector(".gallery");
 
 const galleryPictures = galleryItems.map((item) => {
-  const li = document.createElement("li");
+  const listPictures = document.createElement("li");
   const link = document.createElement("a");
   const picture = document.createElement("img");
 
-  li.classList.add("gallery__item");
+  listPictures.classList.add("gallery__item");
   link.classList.add("gallery__link");
   picture.classList.add("gallery__image");
 
@@ -19,8 +19,8 @@ const galleryPictures = galleryItems.map((item) => {
   picture.alt = item.description;
 
   link.appendChild(picture);
-  li.appendChild(link);
-  return li;
+  listPictures.appendChild(link);
+  return listPictures;
 });
 
 gallery.append(...galleryPictures);
